@@ -1,0 +1,55 @@
+{
+  "name": "kepler-appearance",
+  "version": "1.0.0",
+  "description": "Flip macOS Dark / Light appearance from the Kepler launcher. Install with npx.",
+  "type": "module",
+  "bin": {
+    "kepler-appearance": "bin/install.mjs"
+  },
+  "files": [
+    "dist",
+    "bin",
+    "README.md",
+    "LICENSE"
+  ],
+  "os": [
+    "darwin"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "kepler-plugin bundle src/index.ts --out \"$HOME/Library/Application Support/Kepler/Plugins/kepler-appearance.keplugin\"",
+    "build:dist": "kepler-plugin bundle src/index.ts --out dist/kepler-appearance.keplugin",
+    "manifest": "kepler-plugin manifest src/index.ts --out manifest.json",
+    "dev": "tsup --watch",
+    "prepublishOnly": "npm run build:dist"
+  },
+  "keywords": [
+    "kepler",
+    "kepler-plugin",
+    "plugin",
+    "appearance",
+    "dark-mode",
+    "launcher",
+    "macos"
+  ],
+  "author": "dyandeepu",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UnxnownYT/kepler-appearance.git"
+  },
+  "homepage": "https://github.com/UnxnownYT/kepler-appearance#readme",
+  "bugs": {
+    "url": "https://github.com/UnxnownYT/kepler-appearance/issues"
+  },
+  "devDependencies": {
+    "@kepler-app/plugin-sdk": "^1.1.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild"]
+  }
+}
