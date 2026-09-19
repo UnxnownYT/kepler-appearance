@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "Flip macOS Dark / Light appearance from the Kepler launcher. Install with npx.",
   "type": "module",
+  "kepler": {
+    "apiVersion": 1,
+    "manifest": "dist/kepler-appearance.keplugin/manifest.json",
+    "entry": "dist/kepler-appearance.keplugin/index.js"
+  },
   "bin": {
     "kepler-appearance": "bin/install.mjs"
   },
@@ -23,7 +28,8 @@
     "build:dist": "kepler-plugin bundle src/index.ts --out dist/kepler-appearance.keplugin",
     "manifest": "kepler-plugin manifest src/index.ts --out manifest.json",
     "dev": "tsup --watch",
-    "prepublishOnly": "npm run build:dist"
+    "prepublishOnly": "npm run build:dist",
+    "test": "npm run build:dist && node --test test/package.test.mjs"
   },
   "keywords": [
     "kepler",
