@@ -1,6 +1,6 @@
 {
   "name": "kepler-appearance",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Flip macOS Dark / Light appearance from the Kepler launcher. Install with npx.",
   "type": "module",
   "kepler": {

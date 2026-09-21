@@ -88,7 +88,7 @@ export default definePlugin({
   metadata: {
     id: "com.dyandeepu.appearance",
     name: "Appearance",
-    version: "1.0.0",
+    version: "1.0.3",
     author: "dyandeepu",
     description: "Flip macOS Dark / Light appearance from Kepler.",
     icon: Icon.sfSymbol("circle.lefthalf.filled"),
